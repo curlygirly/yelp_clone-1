@@ -47,3 +47,20 @@ feature 'User can sign in and out' do
     end
   end
 end
+
+# feature ' User editing rights' do
+#   context 'user is signed in and on the homepage' do
+#     it "and can only leave one review per restaurant" do
+#     visit ('/')
+#     sign_in
+#     create_restaurant('Duck & Waffle')
+#     visit '/restaurants'
+#     click_link 'Review Duck & Waffle'
+#     fill_in 'Thoughts', with: 'Duck & Waffle awesome combo - who knew??'
+#     select '4', from: 'Rating'
+#     click_button 'Leave Review'
+#     expect(page).to have_content 'Duck & Waffle awesome combo - who knew??'
+#     expect(page).not_to have_link('Review Duck & Waffle')
+#     end
+#   end
+# end
