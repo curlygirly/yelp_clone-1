@@ -17,6 +17,8 @@
         <li>
           <%= review.thoughts %> - <strong><%= review.rating %>/5</strong>
         </li>
+        <p><%= pluralize review.endorsements.count, 'endorsement' %></p>
+        <%= link_to "Endorse this review" %>
       <% end %>
     </ul>
   <% else %>
