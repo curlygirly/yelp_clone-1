@@ -15,10 +15,11 @@
     <ul>
       <% restaurant.reviews.each do |review| %>
         <li>
-          <%= review.thoughts %> - <strong><%= review.rating %>/5</strong>
+          <%= review.thoughts %> [<strong><%= review.rating %></strong>/5]
         </li>
         <p><%= pluralize review.endorsements.count, 'endorsement' %></p>
-        <%= link_to "Endorse this review" %>
+        Helloooooooooooooo you there?
+        <%= link_to "Endorse this review", review_endorsements_path(review), method: :post %>
       <% end %>
     </ul>
   <% else %>
